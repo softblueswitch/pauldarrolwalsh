@@ -5,52 +5,96 @@ body, html {
     height: 100%;
 }
 
-.banner-image {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    position: absolute;
-    z-index: -1; /* Ensures the image stays in the background */
+#banner {
+    background-image: url('banner3.jpg'); /* Adjust the path to your image */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Cover the entire area of the div without cropping */
+    width: 100%; /* Full width */
+    height: auto; /* Start with zero height */
+    padding-top: 25.8%; /* Percentage padding-top maintains the aspect ratio */
+    
+    position: relative; /* Needed for any absolutely positioned content inside */
 }
 
-#banner {
-    position: relative;
-    width: 100%;
-    height: 200px; /* Adjust based on your banner's desired height */
+/* Example media query for very large screens */
+@media (min-width: 1200px) {
+    #banner {
+        padding-top: 45.8%; /* Adjust this value based on your actual aspect ratio */
+    }
 }
+
 
 #slideshow {
-    width: 30%;
+    width: 40%;
     height: 100px;
     position: absolute;
-    top: 50%;
-    left: 0; /* Aligns slideshow to the left */
+    top: 25%;
+    left: 10%; /* Aligns slideshow to the left */
     transform: translateY(-50%); /* Keeps the slideshow vertically centered */
-    display: flex;
-    padding: 50px;
+    display: block;
+    padding: 0;
     justify-content: center;
     align-items: center;
 }
 
+
+
 #slideshow p {
     font-family: 'Pacifico', cursive;
     color: #AED56E;
-    font-size: 24px;
+    font-size: 35px;
     margin: 0;
     text-align: center;
 }
 
+
 #logo {
-    width: 33.33%;
-    height: 100px;
-    position: relative;
-    text-align: left;
-    padding: 50px;
-    margin-left: 0; /* Aligns the logo to the left */
+    position: absolute; /* Absolute position for the logo within the banner */
+    bottom: 15%; /* Centers vertically */
+    left: 15%; /* Increase this value to move further from the left edge */
+    transform: translateY(-50%); /* Ensures vertical center alignment */
+}
+
+#logo img {
+    display: block; /* Ensures the image does not have extra space below it */
+    width: auto; /* Keeps original image width */
+    height: auto; /* Keeps original image height */
+}
 }
 
 .client-logo {
     width: 100%;
     height: auto;
+    
+}
+
+
+@media (max-width: 768px) {
+    #slideshow, #logo {
+        left: 10%; /* More margin on smaller screens */
+        width: 30%; /* Adjust width to fit smaller screens better */
+    }
+
+    #slideshow {
+        top: 5%; /* Adjust position */
+        font-size: 5vw; /* Slightly larger text on smaller screens */
+    }
+
+    #logo {
+        top: 60%; /* Lower the logo to avoid overlap */
+        width: 25vw; /* Larger relative size on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #slideshow {
+        font-size: 6vw; /* Even larger text for very small screens */
+    }
+
+    .client-logo {
+        width: 78vw; /* Adjust width for very small devices */
+    }
 }
 
 
@@ -133,4 +177,22 @@ body, html {
     max-width: 80%; /* Adjusts the max width of the image */
     height: auto; /* Maintains the aspect ratio of the image */
     margin-top: 20px; /* Adds space between the text and the image */
+}
+
+#action-button {
+     background-color: #24372E; /* Dark teal background color for the button */
+    color: white; /* White text color */
+    padding: 20px 40px; /* Adds padding around the text within the button */
+    width: auto; /* Allows the button width to grow with the padding and text */
+    height: auto; /* Allows the button height to adjust based on padding and text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 18px; /* Font size of the button text */
+    cursor: pointer; /* Changes the cursor on hover */
+    margin-top: 20px; /* Space above the button */
+    box-sizing: border-box; /* Ensures padding is included in width/height calculations */
+     font-family: 'Cabin', sans-serif; /* Uses Cabin font */
+    font-weight: 50; /* Bold weight for the heading */
+    font-size: 17px; /* Sets a larger font size for visibility */
+    letter-spacing: 1.2px;
 }
