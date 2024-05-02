@@ -93,7 +93,7 @@ body, html {
     }
 
     .client-logo {
-        width: 78vw; /* Adjust width for very small devices */
+        width: 30vw; /* Adjust width for very small devices */
     }
 }
 
