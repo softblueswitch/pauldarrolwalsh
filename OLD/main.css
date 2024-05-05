@@ -6,7 +6,7 @@ body, html {
 }
 
 #banner {
-    background-image: url('banner3.jpg'); /* Adjust the path to your image */
+    background-image: url('banner.jpg'); /* Adjust the path to your image */
     background-position: center center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Cover the entire area of the div without cropping */
