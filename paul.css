@@ -1,0 +1,35 @@
+#slideshow {
+    width: 60%;
+    height: 100px;
+    position: relative;
+    top: 25%;
+    right:30%; /* Aligns slideshow to the left */
+    transform: translateY(-50%); /* Keeps the slideshow vertically centered */
+    padding: 0;
+    justify-content: center;
+    
+}
+
+#slideshow p {
+    font-family: 'Pacifico', cursive;
+    color: #AED56E;
+    font-size: 35px;
+    margin: 0;
+    text-align: center;
+    
+}
+    
+    
+.text-container {
+  background-color: rgba(0, 0, 0, 0.5 ); /* Semi-transparent background */
+  color: white;
+  padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .slideshow {
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background for better readability on smaller devices */
+    padding: 15px;
+  }
+}

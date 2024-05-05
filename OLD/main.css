@@ -92,7 +92,7 @@ body, html {
         font-size: 6vw; /* Even larger text for very small screens */
     }
 
-    .client-logo {
+    logo {
         width: 30vw; /* Adjust width for very small devices */
     }
 }
